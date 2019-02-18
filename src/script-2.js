@@ -1,1 +1,3 @@
-module.exports = 'Hell World1';
+const mssg = 'Hello Hi';
+
+module.exports = mssg;

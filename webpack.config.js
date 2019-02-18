@@ -12,5 +12,22 @@ module.exports = {
         publicPath: "/"
     },
 
-    mode: "development"
+    mode: "development",
+
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env']
+                          }
+                    }
+                ],
+                exclude: /node_modules/
+            }
+        ]
+    }
 };
